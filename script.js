@@ -146,3 +146,13 @@ function rejectCookies() {
 
 // Spustit při načtení stránky
 document.addEventListener('DOMContentLoaded', checkCookies);
+// Scroll Progress Bar Logic
+window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+    }
+});
