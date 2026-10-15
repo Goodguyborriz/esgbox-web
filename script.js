@@ -1,5 +1,5 @@
 /**
- * ESGBOX - Dynamic Interaction Script (Orange Edition)
+ * ESGBOX - Dynamic Interaction Script (Orange Edition v2.1)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -61,17 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // 3. SERVICE CARDS HOVER - Jemné sledování světla
-    // Přidáme efekt, kdy karta mírně reaguje na pozici myši uvnitř
+    // 3. SERVICE CARDS HOVER - Jemné sledování světla (Spotlight efekt)
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            // Vytvoříme iluzi odlesku (spotlight)
             card.style.background = `
-                radial-gradient(600px circle at ${x}px ${y}px, rgba(255, 107, 0, 0.05), transparent 40%),
+                radial-gradient(600px circle at ${x}px ${y}px, rgba(255, 107, 0, 0.06), transparent 40%),
                 var(--card-bg)
             `;
         });
@@ -82,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // 4. SMOOTH SCROLL - Hladké přechody mezi sekcemi
-    document.querySelectorAll('nav a').forEach(anchor => {
+    // 4. SMOOTH SCROLL - Hladké přechody pro všechny interní kotvy (#)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
+            if (href.length > 1 && href.startsWith('#')) {
                 const target = document.querySelector(href);
                 if (target) {
+                    e.preventDefault();
                     window.scrollTo({
                         top: target.offsetTop - 70,
                         behavior: 'smooth'
