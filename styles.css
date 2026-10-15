@@ -292,3 +292,59 @@ nav .cta-button {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
 }
+/* Cookies lišta */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #080a0d;
+    border-top: 1px solid var(--border-color);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    box-sizing: border-box;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+#cookie-banner p {
+    margin: 0;
+    line-height: 1.5;
+}
+#cookie-banner a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.cookie-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-main);
+    transition: all 0.2s;
+    letter-spacing: 1px;
+}
+.cookie-btn.accept {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+}
+.cookie-btn:hover {
+    opacity: 0.85;
+}
+@media(max-width: 768px) {
+    #cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
