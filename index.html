@@ -3,107 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESG BOX | Kompaktní nástroj pro profesionální ESG reporting</title>
-    <meta name="description" content="ESG BOX je profesionální nástroj pro organizaci, analýzu a monitoring vašich ESG dat. Získejte sílu v reportingu díky naší kompaktní schránce.">
-    <!-- Odkaz na externí CSS - cestu ponecháváme relativní pro kořenový adresář -->
+    <title>ESGBOX | Inženýrská B2B SaaS platforma pro FVE, výstavbu a energetiku</title>
+    <meta name="description" content="Modulární inženýrská B2B SaaS platforma pro automatizovaný screening pozemků (GeoBOX), topologickou optimalizaci tras (TraceBOX), výpočty sítí (GridBOX), emise kotelen (HeatBOX) a ESG compliance.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navigace - Nyní s absolutními odkazy pro budoucí rozšiřitelnost -->
+    <!-- Navigace -->
     <nav>
         <a href="index.html" class="logo">ESG<span>BOX</span></a>
         <ul>
-            <!-- Odkazy směřují na budoucí podstránky ve složce /services/ -->
-            <li><a href="services/analyza.html">Analýza</a></li>
-            <li><a href="services/strategie.html">Strategie</a></li>
-            <li><a href="services/monitoring.html">Monitoring</a></li>
-            <li><a href="#about">O projektu</a></li>
+            <li><a href="services/analyza.html">GeoBOX</a></li>
+            <li><a href="services/strategie.html">TraceBOX</a></li>
+            <li><a href="services/monitoring.html">GridBOX</a></li>
+            <li><a href="services/kotelny.html">HeatBOX (Kotelny)</a></li>
+            <li><a href="services/organizace.html">Compliance</a></li>
+            <li><a href="#about">Architektura</a></li>
         </ul>
-        <a href="#contact" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Konzultace</a>
+        <a href="#contact" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Poptat audit</a>
     </nav>
 
-    <!-- Hero Sekce - Silný "Boxing" branding -->
+    <!-- Hero Sekce -->
     <section id="hero">
         <div class="hero-content">
-            <h1>Vaše data v bezpečí. <br><span class="highlight">Váš reporting v útoku.</span></h1>
-            <p style="color: var(--text-dim); max-width: 600px; font-size: 1.1rem; margin-bottom: 30px;">
-                ESG BOX není jen úložiště. Je to kompaktní nástroj, který organizuje vaše dokumenty 
-                a dává vám sílu vítězit v džungli regulací.
+            <h1>Přesná data v terénu i kotelně. <br><span class="highlight">Tvrdá úspora ve výstavbě a emisích.</span></h1>
+            <p style="color: var(--text-dim); max-width: 720px; font-size: 1.15rem; margin-bottom: 30px; margin-top: 20px;">
+                ESGBOX není další teoretická poradenská šablona. Je to modulární inženýrská platforma, která propojuje prostorový a geologický screening, topologickou optimalizaci kabelových tras, termodynamické výpočty uhlíkové stopy kotelen (Scope 1–3) a legislativní due diligence do jednoho auditovatelného Compliance BOXu.
             </p>
-            <div style="display: flex; gap: 20px;">
-                <a href="services/analyza.html" class="cta-button">Začít analýzou</a>
-                <a href="#about" class="cta-button" style="background: transparent; border: 2px solid var(--accent-color); color: var(--accent-color);">Více o nás</a>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="services/analyza.html" class="cta-button">Spustit GeoBOX screening</a>
+                <a href="services/kotelny.html" class="cta-button" style="background: transparent; border: 2px solid var(--accent-color); color: var(--accent-color);">Řešení pro kotelny (HeatBOX)</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid - Rozcestník na podstránky -->
+    <!-- Services Grid - Rozcestník modulů -->
     <section id="services">
-        <h2>Naše <span class="highlight">Nástroje</span></h2>
-        <p style="color: var(--text-dim); margin-top: -10px;">Vyberte si konkrétní modul vašeho ESG Boxu.</p>
+        <h2>Modulární <span class="highlight">Ekosystém</span></h2>
+        <p style="color: var(--text-dim); margin-top: 10px;">Pět specializovaných inženýrských modulů. Jeden deterministický výstup pro projektanty, energetiky, investory a úřady.</p>
         
         <div class="services-grid">
-            <!-- Každá karta je nyní proklikávací na vlastní podstránku -->
+            <!-- Modul 01: GeoBOX -->
             <div class="service-card" onclick="window.location.href='services/analyza.html'" style="cursor: pointer;">
-                <h3>Analýza</h3>
-                <p>Detailní rozbor vašich stávajících procesů a identifikace slabých míst v reportingu.</p>
-                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 20px;">ZOBRAZIT DETAIL →</span>
+                <div style="font-size: 0.75rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">MODUL 01 // SCREENING</div>
+                <h3>GeoBOX</h3>
+                <p>Automatizovaný prostorový a geologický screening pozemků. Detekce ochranných pásem, morfologie terénu, inženýrsko-geologických rizik a střetů zájmů dříve, než kopnete do země.</p>
+                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 25px;">SPECIFIKACE MODULU →</span>
             </div>
 
+            <!-- Modul 02: TraceBOX -->
             <div class="service-card" onclick="window.location.href='services/strategie.html'" style="cursor: pointer;">
-                <h3>Strategie</h3>
-                <p>Návrh úderného postupu pro zlepšení vašich ESG skóre a dlouhodobé udržitelnosti.</p>
-                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 20px;">ZOBRAZIT DETAIL →</span>
+                <div style="font-size: 0.75rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">MODUL 02 // TOPOLOGIE</div>
+                <h3>TraceBOX</h3>
+                <p>Algoritmická optimalizace kabelových a výkopových tras. Minimalizujeme délku vedení, objem zemních prací a křížení překážek na základě reálného odporu terénu a CAD/GIS podkladů.</p>
+                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 25px;">SPECIFIKACE MODULU →</span>
             </div>
 
+            <!-- Modul 03: GridBOX -->
             <div class="service-card" onclick="window.location.href='services/monitoring.html'" style="cursor: pointer;">
-                <h3>Monitoring</h3>
-                <p>Neustálý dohled nad změnami v legislativě, abyste byli vždy o několik kroků napřed.</p>
-                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 20px;">ZOBRAZIT DETAIL →</span>
+                <div style="font-size: 0.75rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">MODUL 03 // ELEKTRO &amp; SÍTĚ</div>
+                <h3>GridBOX</h3>
+                <p>Technické výpočty parametrů sítě, úbytků napětí a ztrát výkonu. Kontrola souladu s technickými normami a limity distribuční soustavy v reálném čase.</p>
+                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 25px;">SPECIFIKACE MODULU →</span>
             </div>
 
+            <!-- Modul 04: Compliance BOX -->
             <div class="service-card" onclick="window.location.href='services/organizace.html'" style="cursor: pointer;">
-                <h3>Organizace</h3>
-                <p>Kompaktní uložení všech ESG dokumentů na jednom místě, připravené k okamžitému auditu.</p>
-                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 20px;">ZOBRAZIT DETAIL →</span>
+                <div style="font-size: 0.75rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 8px; font-weight: 700;">MODUL 04 // DUE DILIGENCE</div>
+                <h3>Compliance BOX</h3>
+                <p>Kompletní, auditovatelný balík výstupní dokumentace, prostorových vrstev a výkazů výměr. Připraveno pro stavební řízení, bankovní financování, ESG posouzení a EPC realizaci.</p>
+                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 25px;">SPECIFIKACE MODULU →</span>
+            </div>
+
+            <!-- Modul 05: HeatBOX -->
+            <div class="service-card" onclick="window.location.href='services/kotelny.html'" style="cursor: pointer;">
+                <div style="font-size: 0.75rem; color: var(--accent-color); letter-spacing: 2px; margin-bottom: 8px; font-weight: 800;">MODUL 05 // ENERGETIKA &amp; TEPLO</div>
+                <h3>HeatBOX (Kotelny)</h3>
+                <p>Inženýrský ESG framework a výpočet Scope 1–3 pro městské a průmyslové kotelny. Výhřevnost vs. spalné teplo, certifikace biomasy RED III, DeSOx/DeNOx a alokace KVET místo odhadů z internetu.</p>
+                <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 800; display: block; margin-top: 25px;">PROČ NESTAČÍ KALKULAČKA →</span>
             </div>
         </div>
     </section>
 
-    <!-- O projektu - Sekce zůstává na hlavní stránce -->
+    <!-- O projektu / Architektura řešení -->
     <section id="about">
-        <h2>Filozofie <span class="highlight">Boxu</span></h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; margin-top: 40px;">
+        <h2>Deterministický <span class="highlight">Inženýring</span></h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center; margin-top: 40px;">
             <div>
-                <p style="color: var(--text-dim);">
-                    ESG BOX vznikl z potřeby vnést řád do chaosu. Chápeme, že udržitelnost je pro moderní firmy 
-                    tou největší výzvou současnosti. Proto jsme vytvořili řešení, které je stejně pevné jako krabice, do které 
-                    vše bezpečně uložíte, a stejně dynamické jako sport, podle kterého se jmenujeme.
+                <p style="color: var(--text-main); font-size: 1.15rem; font-weight: 600; margin-bottom: 20px;">
+                    Konec slepých odhadů při přípravě FVE, liniových staveb a energetických auditů. Nahrazujeme ruční lepení tabulek exaktním prostorovým a termodynamickým modelováním.
                 </p>
-                <p style="color: var(--text-dim); margin-top: 20px;">
-                    Naším cílem je, aby byl váš reporting kompaktní, přehledný a úderný.
+                <p style="color: var(--text-dim);">
+                    Každý metr zbytečného výkopu, přehlédnuté ochranné pásmo nebo 10,8% chyba ve výpočtu emisí kotelny kvůli záměně spalného tepla za výhřevnost stojí v praxi statisíce korun a měsíce zdržení. ESGBOX integruje veřejné datové zdroje (katastr, geologie, digitální modely terénu, inženýrské sítě) a přísné legislativní metodiky (MRR, RED III, GHG Protocol) s pokročilými algoritmy.
+                </p>
+                <p style="color: var(--text-dim); margin-top: 15px;">
+                    Výsledkem není jen PDF prezentace, ale <strong>exaktně spočítaný a zvalidovaný technický podklad</strong>, který obstojí před hlavním inženýrem projektu, stavebním úřadem, ověřovatelem emisí i financující bankou.
                 </p>
             </div>
-            <div style="background: var(--card-bg); height: 250px; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden;">
-                <div style="width: 80px; height: 80px; border: 4px solid var(--accent-color); position: relative; margin-bottom: 20px;"></div>
-                <span style="color: var(--accent-color); font-weight: 900; font-size: 1.2rem; letter-spacing: 2px;">THE BOX</span>
+            
+            <!-- Technický box s metrikami -->
+            <div style="background: var(--card-bg); padding: 40px; border: 1px solid var(--border-color); border-left: 4px solid var(--accent-color); position: relative;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                    <div style="width: 35px; height: 35px; border: 3px solid var(--accent-color);"></div>
+                    <span style="color: var(--accent-color); font-weight: 900; font-size: 1.1rem; letter-spacing: 2px;">WORKFLOW PIPELINE</span>
+                </div>
+                <ul style="list-style: none; color: var(--text-dim); font-size: 0.95rem;">
+                    <li style="margin-bottom: 12px;"><strong style="color: var(--text-main);">01 / Ingesce dat:</strong> Katastr, DMT, geologické mapy, palivové a technologické bilance</li>
+                    <li style="margin-bottom: 12px;"><strong style="color: var(--text-main);">02 / Fyzikální model:</strong> 3D analýza terénního odporu, elektro dimenzace a stechiometrie spalování</li>
+                    <li style="margin-bottom: 12px;"><strong style="color: var(--text-main);">03 / Optimalizace &amp; Alokace:</strong> Návrh nejlevnější trasy a exaktní alokace emisí (KVET / Scope 1–3)</li>
+                    <li><strong style="color: var(--text-main);">04 / Export:</strong> GeoPackage / DXF vrstvy, výkaz výměr a auditovatelný Compliance report</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Kontakt -->
-    <section id="contact" style="text-align: center; border-top: 1px solid var(--border-color);">
-        <h2>Připraveni na <span class="highlight">Další kolo?</span></h2>
-        <p style="margin-bottom: 40px; color: var(--text-dim);">Napište nám a společně nastavíme váš ESG reporting na vítěznou vlnu.</p>
-        <a href="mailto:info@esgbox.cz" class="cta-button">Odeslat poptávku</a>
+    <!-- Sekce Pro investory a strategické partnery (SEO & B2B SaaS Positioning) -->
+    <section id="investors" style="border-top: 1px solid var(--border-color); padding-top: 90px; padding-bottom: 90px;">
+        <div style="font-size: 0.75rem; color: var(--accent-color); letter-spacing: 2px; margin-bottom: 10px; font-weight: 800; text-transform: uppercase;">
+            CORPORATE &amp; INVESTOR RELATIONS // B2B SAAS INFRASTRUCTURE
+        </div>
+        <h2>Pro investory a <span class="highlight">Strategické partnery</span></h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; margin-top: 40px; align-items: start;">
+            
+            <!-- Levý sloupec: B2B SaaS vize a SEO klíčová slova -->
+            <div>
+                <p style="color: var(--text-main); font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; line-height: 1.4;">
+                    ESGBOX buduje páteřní B2B SaaS infrastrukturu pro automatizovaný inženýring, technické due diligence a exaktní ESG compliance v energetice a stavebnictví.
+                </p>
+                <p style="color: var(--text-dim); font-size: 0.95rem; margin-bottom: 15px;">
+                    Trh obnovitelných zdrojů (FVE, větrné parky, BESS), teplárenství (CZT) a liniové výstavby čelí bezprecedentnímu tlaku evropské regulace (<strong>CSRD / ESRS, EU Taxonomie, RED III, EU ETS 1 &amp; 2</strong>) a přísným kritériím zeleného bankovního financování. Tradiční poradenské firmy tento tlak řeší ručním přepisováním tabulek, které je pomalé, drahé a náchylné k systémovým chybám.
+                </p>
+                <p style="color: var(--text-dim); font-size: 0.95rem;">
+                    Naše proprietární výpočetní jádro tento proces <strong>plně algoritmizuje</strong>. Propojujeme GIS prostorovou analýzu, geotechnický screening, topologickou optimalizaci sítí a termodynamické výpočty uhlíkové stopy (Scope 1–3) do škálovatelné softwarové platformy s vysokou přidanou hodnotou a opakovanými příjmy (ARR).
+                </p>
+            </div>
+
+            <!-- Pravý sloupec: Strukturované pilíře byznys modelu -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                
+                <div style="background: var(--card-bg); padding: 25px; border: 1px solid var(--border-color); border-top: 3px solid var(--accent-color);">
+                    <div style="color: var(--accent-color); font-weight: 900; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 8px;">BYZNYS MODEL</div>
+                    <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 10px;">B2B SaaS &amp; DaaS</h3>
+                    <p style="color: var(--text-dim); font-size: 0.85rem;">
+                        Kombinace softwarových licencí, projektového zpracování dat (Data-as-a-Service) a API integrací pro velké EPC kontraktory, energetické skupiny a projekční kanceláře.
+                    </p>
+                </div>
+
+                <div style="background: var(--card-bg); padding: 25px; border: 1px solid var(--border-color); border-top: 3px solid var(--accent-color);">
+                    <div style="color: var(--accent-color); font-weight: 900; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 8px;">TECHNOLOGICKÝ MOAT</div>
+                    <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 10px;">Deep-Tech &amp; GIS Jádro</h3>
+                    <p style="color: var(--text-dim); font-size: 0.85rem;">
+                        Vlastní matematické modely prostorového odporu terénu, grafové optimalizace tras a stechiometrické bilance paliv plně lícující s metodikami MRR a GHG Protocol.
+                    </p>
+                </div>
+
+                <div style="background: var(--card-bg); padding: 25px; border: 1px solid var(--border-color); border-top: 3px solid var(--accent-color);">
+                    <div style="color: var(--accent-color); font-weight: 900; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 8px;">CÍLOVÝ TRH (CEE &amp; EU)</div>
+                    <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 10px;">Energetika &amp; Výstavba</h3>
+                    <p style="color: var(--text-dim); font-size: 0.85rem;">
+                        Developeři solárních a infrastrukturních parků, městské teplárny, průmyslové podniky, financující banky a investiční fondy zaměřené na udržitelnou infrastrukturu.
+                    </p>
+                </div>
+
+                <div style="background: var(--card-bg); padding: 25px; border: 1px solid var(--border-color); border-top: 3px solid var(--accent-color);">
+                    <div style="color: var(--accent-color); font-weight: 900; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 8px;">PARTNERSTVÍ</div>
+                    <h3 style="font-size: 1rem; color: var(--text-main); margin-bottom: 10px;">White-Label &amp; Integrace</h3>
+                    <p style="color: var(--text-dim); font-size: 0.85rem;">
+                        Otevřenost pro strategické aliance s auditorskými společnostmi, bankovními domy a dodavateli technologií. Možnost vyžádání <strong>Investor Decku</strong>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <footer style="padding: 40px 10%; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: var(--text-dim);">
-        <p>&copy; 2026 ESGBOX.CZ | Všechna práva vyhrazena.</p>
+    <!-- Kontakt & Poptávka -->
+    <section id="contact" style="border-top: 1px solid var(--border-color);">
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <h2>Máte pozemek, síť nebo kotelnu <span class="highlight">K posouzení?</span></h2>
+            <p style="margin-top: 20px; margin-bottom: 40px; color: var(--text-dim);">
+                Pošlete nám parcelní čísla, studii proveditelnosti nebo palivovou bilanci vaší kotelny. Uděláme pilotní screening a ukážeme vám přesná čísla.
+            </p>
+            
+            <form action="mailto:info@esgbox.cz" method="post" enctype="text/plain" style="display: grid; gap: 15px; text-align: left;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                    <input type="text" name="Jmeno" placeholder="Vaše jméno / Společnost" required class="form-input">
+                    <input type="email" name="Email" placeholder="Váš pracovní e-mail" required class="form-input">
+                </div>
+                <input type="text" name="Lokalita_Projekt" placeholder="Lokalita / Katastrální území nebo typ zdroje (např. FVE 2.5 MWp / Kotelna 12 MWt)" class="form-input">
+                <textarea name="Zprava" rows="4" placeholder="Stručný popis záměru, požadovaných modulů (GeoBOX, TraceBOX, GridBOX, HeatBOX...) nebo dotaz pro Investor Relations" class="form-input"></textarea>
+                <button type="submit" class="cta-button" style="width: 100%; text-align: center; margin-top: 10px;">Odeslat parametry ke konzultaci</button>
+            </form>
+            
+            <p style="margin-top: 25px; font-size: 0.85rem; color: var(--text-dim);">
+                Nebo nám napište napřímo: <a href="mailto:info@esgbox.cz" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">info@esgbox.cz</a>
+            </p>
+        </div>
+    </section>
+
+    <footer style="padding: 40px 10%; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: var(--text-dim); background: #080a0d;">
+        <p style="letter-spacing: 1px;">
+            &copy; 2026 ESGBOX.CZ | Inženýrská B2B SaaS platforma &amp; Technické Due Diligence. Všechna práva vyhrazena. | 
+            <a href="#investors" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Pro investory</a>
+        </p>
     </footer>
 
-    <!-- Propojení skriptu -->
     <script src="script.js"></script>
 </body>
 </html>
