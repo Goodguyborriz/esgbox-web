@@ -348,3 +348,15 @@ nav .cta-button {
         align-items: flex-start;
     }
 }
+/* Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--accent-color);
+    z-index: 10000;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px var(--accent-color);
+}
