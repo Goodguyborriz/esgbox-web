@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridBOX – Výpočty parametrů sítě a dimenzování | ESGBOX</title>
+    <meta name="description" content="Technické výpočty parametrů sítě, úbytků napětí, oteplení kabelů a připravenosti na připojení k distribuční soustavě.">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html" class="logo">ESG<span>BOX</span></a>
+        <ul>
+            <li><a href="analyza.html">GeoBOX</a></li>
+            <li><a href="strategie.html">TraceBOX</a></li>
+            <li><a href="monitoring.html" style="color: var(--accent-color);">GridBOX</a></li>
+            <li><a href="kotelny.html">HeatBOX (Kotelny)</a></li>
+            <li><a href="organizace.html">Compliance</a></li>
+            <li><a href="../index.html#about">Architektura</a></li>
+        </ul>
+        <a href="../index.html#contact" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Poptat audit</a>
+    </nav>
+
+    <section>
+        <div style="margin-bottom: 40px;">
+            <a href="../index.html" style="color: var(--accent-color); text-decoration: none; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px;">← ZPĚT NA ROZCESTNÍK</a>
+        </div>
+        
+        <h1>Modul <span class="highlight">GridBOX</span></h1>
+        <p style="color: var(--text-dim); margin-top: 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">Technické výpočty sítě, dimenzování a normová verifikace</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; margin-top: 40px;">
+            <div class="content-text">
+                <p style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 25px; font-weight: 600; line-height: 1.3;">
+                    Geometrií to nekončí. Každá navržená trasa musí beze zbytku sedět elektricky, tepelně i normově.
+                </p>
+                <p style="color: var(--text-dim); margin-bottom: 20px;">
+                    Sebelepší prostorová trasa je k ničemu, pokud na ní vznikají nepřijatelné úbytky napětí nebo dochází k přehřívání souběžných kabelových svazků v zemi. GridBOX přebírá reálné 3D délky z TraceBOXu a provádí nad nimi deterministické elektrotechnické výpočty.
+                </p>
+                <ul style="list-style: none; color: var(--text-dim); margin-top: 30px;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                        <span style="color: var(--accent-color); margin-right: 15px; font-weight: 900;">[X]</span>
+                        <span><strong>Dimenzování průřezů a úbytky napětí:</strong> Automatický přepočet úbytků napětí (ΔU) a činných ztrát na DC i AC straně podle skutečné topologie a profilu zatížení.</span>
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                        <span style="color: var(--accent-color); margin-right: 15px; font-weight: 900;">[X]</span>
+                        <span><strong>Tepelný odpor půdy a redukční součinitele:</strong> Zohlednění seskupení kabelů ve výkopu, hloubky uložení a měrného tepelného odporu zeminy dle ČSN.</span>
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                        <span style="color: var(--accent-color); margin-right: 15px; font-weight: 900;">[X]</span>
+                        <span><strong>Analýza bodu připojení (PCC):</strong> Kontrola technických podmínek distributora (ČEZ Distribuce, EG.D, PREdistribuce), kompenzace jalového výkonu a zkratových poměrů.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="background: var(--card-bg); padding: 50px 40px; border: 1px solid var(--border-color); border-left: 4px solid var(--accent-color); position: relative;">
+                <div style="position: absolute; top: 20px; right: 20px; opacity: 0.1; font-size: 4rem; font-weight: 900; color: var(--accent-color);">03</div>
+                <h3 style="color: var(--accent-color); margin-bottom: 25px; letter-spacing: 2px;">VÝSTUP: SÍŤOVÝ PROTOKOL &amp; DIMENZACE</h3>
+                <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.7;">
+                    Výstupem je <strong>Protokol elektrického dimenzování a ztrát</strong>. Dostanete přesnou tabulku všech větví s doporučenými průřezy, jištěním, výpočtem ročních ztrát v MWh a doložením shody s technickými normami pro autorizovaného inženýra.
+                </p>
+                <div style="margin-top: 40px;">
+                    <a href="../index.html#contact" class="cta-button" style="width: 100%; text-align: center; display: block;">OVĚŘIT PARAMETRY SÍTĚ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 60px 10%; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: var(--text-dim); background: #080a0d;">
+        <p style="letter-spacing: 1px;">
+            &copy; 2026 ESGBOX.CZ | VŠECHNA PRÁVA VYHRAZENA. | 
+            <a href="../index.html#investors" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Pro investory</a>
+        </p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

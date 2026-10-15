@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceBOX – Topologická optimalizace tras | ESGBOX</title>
+    <meta name="description" content="Algoritmický návrh a optimalizace kabelových a výkopových tras pro FVE a liniové stavby. Minimalizujte náklady na výkopy a kabeláž.">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html" class="logo">ESG<span>BOX</span></a>
+        <ul>
+            <li><a href="analyza.html">GeoBOX</a></li>
+            <li><a href="strategie.html" style="color: var(--accent-color);">TraceBOX</a></li>
+            <li><a href="monitoring.html">GridBOX</a></li>
+            <li><a href="kotelny.html">HeatBOX (Kotelny)</a></li>
+            <li><a href="organizace.html">Compliance</a></li>
+            <li><a href="../index.html#about">Architektura</a></li>
+        </ul>
+        <a href="../index.html#contact" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Poptat audit</a>
+    </nav>
+
+    <section>
+        <div style="margin-bottom: 40px;">
+            <a href="../index.html" style="color: var(--accent-color); text-decoration: none; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px;">← ZPĚT NA ROZCESTNÍK</a>
+        </div>
+        
+        <h1>Modul <span class="highlight">TraceBOX</span></h1>
+        <p style="color: var(--text-dim); margin-top: 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">Topologická optimalizace kabelových a výkopových tras</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; margin-top: 40px;">
+            <div class="content-text">
+                <p style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 25px; font-weight: 600; line-height: 1.3;">
+                    Nejlevnější metr výkopu je ten, který vůbec nemusíte kopat. Druhý nejlevnější vede tudy, kudy to dává inženýrský smysl.
+                </p>
+                <p style="color: var(--text-dim); margin-bottom: 20px;">
+                    Projektanti často kreslí trasy ručně od oka – po obvodu parcel nebo v kolmém rastru bez ohledu na lokální geologii, převýšení a cenu zemních prací. TraceBOX využívá grafové algoritmy a 3D povrch nákladového odporu z modulu GeoBOX k nalezení matematicky optimální topologie sítě.
+                </p>
+                <ul style="list-style: none; color: var(--text-dim); margin-top: 30px;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                        <span style="color: var(--accent-color); margin-right: 15px; font-weight: 900;">[X]</span>
+                        <span><strong>Least-Cost Path &amp; Steinerovy stromy:</strong> Výpočet tras, které minimalizují součet nákladů na výkopové práce, protlaky pod komunikacemi a metráž drahé kabeláže.</span>
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                        <span style="color: var(--accent-color); margin-right: 15px; font-weight: 900;">[X]</span>
+                        <span><strong>Sdružování souběhů (Trench Sharing):</strong> Automatická agregace DC/AC větví a optických chrániček do společných výkopových rýh při dodržení normových odstupů.</span>
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                        <span style="color: var(--accent-color); margin-right: 15px; font-weight: 900;">[X]</span>
+                        <span><strong>Optimalizace polohy střídačů a trafostanic:</strong> Výpočet těžiště zátěže pro minimalizaci celkových ohmických ztrát a spotřeby mědi či hliníku.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="background: var(--card-bg); padding: 50px 40px; border: 1px solid var(--border-color); border-right: 4px solid var(--accent-color); position: relative;">
+                <div style="position: absolute; top: 20px; right: 20px; opacity: 0.1; font-size: 4rem; font-weight: 900; color: var(--accent-color);">02</div>
+                <h3 style="color: var(--accent-color); margin-bottom: 25px; letter-spacing: 2px;">VÝSTUP: OPTIMALIZOVANÁ TOPOLOGIE &amp; BOQ</h3>
+                <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.7;">
+                    Výstupem je <strong>Optimalizované schéma tras v CAD/GIS</strong> a přesný <strong>Výkaz výměr (Bill of Quantities)</strong>. Získáte přímé srovnání původního návrhu s optimalizovanou variantou – přesně na metry kabelů a kubíky výkopů.
+                </p>
+                <div style="margin-top: 40px;">
+                    <a href="../index.html#contact" class="cta-button" style="width: 100%; text-align: center; display: block;">OPTIMALIZOVAT TRASY PROJEKTU</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 60px 10%; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: var(--text-dim); background: #080a0d;">
+        <p style="letter-spacing: 1px;">
+            &copy; 2026 ESGBOX.CZ | VŠECHNA PRÁVA VYHRAZENA. | 
+            <a href="../index.html#investors" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Pro investory</a>
+        </p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
