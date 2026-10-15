@@ -1,6 +1,6 @@
 /* 
  * ESG BOX - Power-Box Design System 
- * Orange Edition v2.0
+ * Orange Edition v2.1 (Clean & Production Ready)
  */
 
 :root {
@@ -8,8 +8,8 @@
     --card-bg: #0d1117;         /* Původní barva těla webu */
     --accent-color: #ff6b00;    /* Bojová oranžová */
     --accent-glow: rgba(255, 107, 0, 0.4);
-    --text-main: #e6edf3;       /* Světlý text[cite: 1] */
-    --text-dim: #8b949e;        /* Šedý text[cite: 1] */
+    --text-main: #e6edf3;       /* Světlý text */
+    --text-dim: #8b949e;        /* Šedý text */
     --border-color: rgba(255, 255, 255, 0.1);
     --transition-fast: 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
@@ -29,13 +29,39 @@ body {
     overflow-x: hidden;
 }
 
-/* Dynamický gradient na pozadí */
+/* --- DYNAMICKÉ POZADÍ S ORANŽOVÝMI ODLESKY --- */
 body::before {
     content: "";
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 15% 15%, rgba(255, 107, 0, 0.04) 0%, transparent 40%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(255, 107, 0, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 85% 85%, rgba(255, 107, 0, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(5, 7, 10, 1) 0%, #000 100%);
+    z-index: -2;
+    animation: backgroundDrift 20s ease infinite alternate;
+}
+
+@keyframes backgroundDrift {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1) translate(10px, 10px); }
+}
+
+/* Přidání druhého fixního odlesku pro texturu */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.1;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* --- TYPOGRAFIE --- */
@@ -46,12 +72,35 @@ h1, h2, h3 {
     line-height: 1.1;
 }
 
+h1 {
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Světelný odlesk pod nadpisem sekce */
+section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
 .highlight {
     color: var(--accent-color);
     text-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* --- NAVIGACE[cite: 1] --- */
+/* --- NAVIGACE --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -70,12 +119,20 @@ nav {
     font-size: 1.6rem;
     color: var(--text-main);
     text-decoration: none;
-    transition: transform 0.1s ease-out; /* Pro magnetic efekt v JS */
+    transition: transform 0.1s ease-out;
 }
 
-.logo span { color: var(--accent-color); }
+.logo span {
+    color: var(--accent-color);
+}
 
-nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
 nav a {
     text-decoration: none;
     color: var(--text-dim);
@@ -86,20 +143,23 @@ nav a {
     transition: var(--transition-fast);
 }
 
-nav a:hover { color: var(--accent-color); }
+nav a:hover {
+    color: var(--accent-color);
+}
 
-/* --- SECTIONS[cite: 1] --- */
+/* --- SEKCE --- */
 section {
     padding: 120px 10%;
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
 }
 
-/* --- SERVICES GRID (The "Box" Look)[cite: 1] --- */
+/* --- SERVICES GRID (The "Box" Look) --- */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1px; /* Tenké linky jako spoje krabice */
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1px;
     background: var(--border-color);
     border: 1px solid var(--border-color);
     margin-top: 50px;
@@ -107,7 +167,7 @@ section {
 
 .service-card {
     background: var(--card-bg);
-    padding: 60px 40px;
+    padding: 55px 38px;
     transition: var(--transition-fast);
     position: relative;
     overflow: hidden;
@@ -123,17 +183,30 @@ section {
 .service-card::before {
     content: "";
     position: absolute;
-    left: 0; bottom: 0; width: 100%; height: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
     background: var(--accent-color);
     transition: var(--transition-fast);
 }
 
-.service-card:hover::before { height: 4px; }
+.service-card:hover::before {
+    height: 4px;
+}
 
-.service-card h3 { color: var(--accent-color); margin-bottom: 15px; }
-.service-card p { color: var(--text-dim); font-size: 0.95rem; }
+.service-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.35rem;
+}
 
-/* --- TLAČÍTKA[cite: 1] --- */
+.service-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+/* --- TLAČÍTKA --- */
 .cta-button {
     display: inline-block;
     padding: 18px 40px;
@@ -154,68 +227,68 @@ section {
     box-shadow: 0 10px 30px var(--accent-glow);
 }
 
-/* --- RESPONZIVITA[cite: 1] --- */
-@media (max-width: 768px) {
-    nav ul { display: none; }
-    section { padding: 80px 6%; }
-    .services-grid { gap: 15px; background: transparent; border: none; }
-    .service-card { border: 1px solid var(--border-color); padding: 40px 30px; }
+nav .cta-button {
+    margin-top: 0;
 }
 
-/* Custom Scrollbar pro dospělý vzhled */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--primary-bg); }
-
-::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
-/* --- DYNAMICKÉ POZADÍ S ORANŽOVÝMI ODLESKY --- */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+/* --- FORMULÁŘOVÉ PRVKY --- */
+.form-input {
     width: 100%;
-    height: 100%;
-    /* Kombinace několika gradientů pro hloubku */
-    background: 
-        radial-gradient(circle at 15% 15%, rgba(255, 107, 0, 0.08) 0%, transparent 35%),
-        radial-gradient(circle at 85% 85%, rgba(255, 107, 0, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(5, 7, 10, 1) 0%, #000 100%);
-    z-index: -2; /* Musí být úplně vespod */
-    animation: backgroundDrift 20s ease-infinite alternate;
+    padding: 16px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+    outline: none;
 }
 
-/* Jemná animace pohybu odlesků */
-@keyframes backgroundDrift {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1) translate(10px, 10px); }
+.form-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.15);
 }
 
-/* Přidání druhého fixního odlesku pro texturu */
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Jemný šum pro hi-tech vzhled */
-    opacity: 0.1;
-    z-index: -1;
-    pointer-events: none;
-}
-section {
-    position: relative;
+.form-input::placeholder {
+    color: var(--text-dim);
 }
 
-/* Světelný odlesk pod nadpisem sekce */
-section h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 60px;
-    height: 4px;
+/* --- RESPONZIVITA --- */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+    section {
+        padding: 80px 6%;
+    }
+    .services-grid {
+        gap: 15px;
+        background: transparent;
+        border: none;
+    }
+    .service-card {
+        border: 1px solid var(--border-color);
+        padding: 40px 30px;
+    }
+}
+
+/* --- CUSTOM SCROLLBAR --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-color); /* Oranžová záře pod čárou */
 }
