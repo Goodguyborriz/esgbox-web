@@ -186,15 +186,24 @@
                 Pošlete nám parcelní čísla, studii proveditelnosti nebo palivovou bilanci vaší kotelny. Uděláme pilotní screening a ukážeme vám přesná čísla.
             </p>
             
-            <form action="mailto:info@esgbox.cz" method="post" enctype="text/plain" style="display: grid; gap: 15px; text-align: left;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                    <input type="text" name="Jmeno" placeholder="Vaše jméno / Společnost" required class="form-input">
-                    <input type="email" name="Email" placeholder="Váš pracovní e-mail" required class="form-input">
-                </div>
-                <input type="text" name="Lokalita_Projekt" placeholder="Lokalita / Katastrální území nebo typ zdroje (např. FVE 2.5 MWp / Kotelna 12 MWt)" class="form-input">
-                <textarea name="Zprava" rows="4" placeholder="Stručný popis záměru, požadovaných modulů (GeoBOX, TraceBOX, GridBOX, HeatBOX...) nebo dotaz pro Investor Relations" class="form-input"></textarea>
-                <button type="submit" class="cta-button" style="width: 100%; text-align: center; margin-top: 10px;">Odeslat parametry ke konzultaci</button>
-            </form>
+            <<form action="https://api.web3forms.com/submit" method="POST" style="display: grid; gap: 15px; text-align: left;">
+    
+    <!-- Web3Forms Access Key (zadej svůj klíč, viz krok níže) -->
+    <input type="hidden" name="apikey" value="T874bbd70-4fda-43f8-a46a-36717f3061a6">
+    
+    <!-- Honeypot past na boty - lidé toto pole neuvidí ani nevyplní, bot ano -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none !important;" autocomplete="off">
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+        <input type="text" name="Jmeno" placeholder="Vaše jméno / Společnost" required class="form-input">
+        <input type="email" name="Email" placeholder="Váš pracovní e-mail" required class="form-input">
+    </div>
+    
+    <input type="text" name="Lokalita_Projekt" placeholder="Lokalita / Katastrální území nebo typ zdroje (např. FVE 2.5 MWp / Kotelna 12 MWt)" class="form-input">
+    <textarea name="Zprava" rows="4" placeholder="Stručný popis záměru, požadovaných modulů (GeoBOX, TraceBOX, GridBOX, HeatBOX...) nebo dotaz pro Investor Relations" class="form-input"></textarea>
+    
+    <button type="submit" class="cta-button" style="width: 100%; text-align: center; margin-top: 10px;">Odeslat parametry ke konzultaci</button>
+</form>
             <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 15px; text-align: center;">
     Odesláním formuláře berete na vědomí zpracování údajů za účelem vyřízení poptávky v souladu s <a href="gdpr.html" style="color: var(--accent-color); text-decoration: none;">podmínkami ochrany soukromí</a>.
 </p>
