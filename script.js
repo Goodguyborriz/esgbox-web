@@ -98,3 +98,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+// Google Analytics ID (nahraď svým měřicím kódem, např. G-XXXXXXXXXX)
+const GA_MEASUREMENT_ID = 'G-TVÉ_ID_SEM';
+
+function loadGoogleAnalytics() {
+    if (window.gaLoaded) return;
+    window.gaLoaded = true;
+    
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+}
+
+function checkCookies() {
+    const consent = localStorage.getItem('esgbox_cookie_consent');
+    const banner = document.getElementById('cookie-banner');
+    
+    if (consent === 'accepted') {
+        loadGoogleAnalytics();
+    } else if (consent === 'rejected') {
+        // Nesmí se načíst nic
+    } else {
+        // Ještě nebyla provedena volba, ukážeme banner
+        if (banner) banner.style.display = 'flex';
+    }
+}
+
+function acceptCookies() {
+    localStorage.setItem('esgbox_cookie_consent', 'accepted');
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'none';
+    loadGoogleAnalytics();
+}
+
+function rejectCookies() {
+    localStorage.setItem('esgbox_cookie_consent', 'rejected');
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'none';
+}
+
+// Spustit při načtení stránky
+document.addEventListener('DOMContentLoaded', checkCookies);
