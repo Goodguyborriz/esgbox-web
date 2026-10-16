@@ -42,6 +42,67 @@
 
     <!-- Hero Sekce -->
     <section id="hero">
+        <!-- Pozadí s animovanou line-art smyčkou -->
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: 0; opacity: 0.15;">
+    <svg viewBox="0 0 1200 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <style>
+            .anim-line {
+                fill: none;
+                stroke: #FF7A00;
+                stroke-width: 2;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: drawLine 8s linear infinite;
+            }
+            .pulse-node {
+                fill: #FF7A00;
+                animation: pulseNode 3s ease-in-out infinite;
+            }
+            @keyframes drawLine {
+                0% { stroke-dashoffset: 1000; }
+                50% { stroke-dashoffset: 0; }
+                100% { stroke-dashoffset: -1000; }
+            }
+            @keyframes pulseNode {
+                0%, 100% { transform: scale(1); opacity: 0.4; }
+                50% { transform: scale(1.4); opacity: 1; }
+            }
+        </style>
+
+        <!-- Kabely / Sítě (GridBox - vlevo) -->
+        <g transform="translate(100, 150)">
+            <path class="anim-line" d="M0,100 L150,100 L200,50 L350,50" />
+            <circle class="pulse-node" cx="0" cy="100" r="5" />
+            <circle class="pulse-node" cx="150" cy="100" r="4" style="animation-delay: 1s;" />
+            <path class="anim-line" d="M150,100 L150,200 L250,200" style="animation-delay: 2s;" />
+            <!-- Ikona line-art sítě / uzlů -->
+            <rect x="250" y="170" width="50" height="60" fill="none" stroke="#FF7A00" stroke-width="2" />
+            <line x1="250" y1="190" x2="300" y2="190" stroke="#FF7A00" stroke-width="2" />
+        </g>
+
+        <!-- Solární panel / Fovoltaika (Geo/TraceBOX - uprostřed) -->
+        <g transform="translate(480, 120)">
+            <path class="anim-line" d="M0,50 L100,100 L200,50" style="animation-delay: 1.5s;" />
+            <!-- Line-art solární panel -->
+            <polygon points="50,100 150,70 220,130 120,160" fill="none" stroke="#FF7A00" stroke-width="2" />
+            <line x1="90" y1="88" x2="140" y2="135" stroke="#FF7A00" stroke-width="1.5" />
+            <line x1="130" y1="76" x2="180" y2="123" stroke="#FF7A00" stroke-width="1.5" />
+            <circle class="pulse-node" cx="135" cy="115" r="5" style="animation-delay: 2.5s;" />
+        </g>
+
+        <!-- Kotel / Termodynamika (HeatBOX - vpravo) -->
+        <g transform="translate(800, 130)">
+            <path class="anim-line" d="M0,70 L120,120 L220,70" style="animation-delay: 3s;" />
+            <!-- Line-art kotel / válec -->
+            <ellipse cx="120" cy="120" rx="30" ry="15" fill="none" stroke="#FF7A00" stroke-width="2" />
+            <path d="M90,120 L90,170 C90,185 150,185 150,170 L150,120" fill="none" stroke="#FF7A00" stroke-width="2" />
+            <path class="anim-line" d="M120,185 L120,240" style="animation-delay: 4s;" stroke-dasharray="200" />
+            <!-- Komín / pára -->
+            <path d="M135,110 L135,90 L145,80" fill="none" stroke="#FF7A00" stroke-width="2" />
+            <circle class="pulse-node" cx="120" cy="150" r="6" style="animation-delay: 1.5s;" />
+        </g>
+    </svg>
+</div>
         <div class="hero-content">
             <h1>Přesná data v terénu i kotelně. <br><span class="highlight">Tvrdá úspora ve výstavbě a emisích.</span></h1>
             <p style="color: var(--text-dim); max-width: 720px; font-size: 1.15rem; margin-bottom: 30px; margin-top: 20px;">
